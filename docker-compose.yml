@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  bun-mysql:
+    container_name: bun-mysql
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    env_file: .env
+    volumes:
+      - bun-mysql-data:/var/lib/mysql
+
+volumes:
+  bun-mysql-data:
